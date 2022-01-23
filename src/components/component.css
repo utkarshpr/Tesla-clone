@@ -1,0 +1,8 @@
+.downArrow {
+  cursor: pointer;
+  height: 40px;
+  overflow-x: hidden;
+  animation: animateDown infinite 1.5s;
+}
+.buttons {
+}
