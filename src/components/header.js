@@ -3,18 +3,27 @@ import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import { useState } from "react";
+import { selectCars } from "../features/car/carSlice";
+import { useSelector } from "react-redux";
 function Header() {
   const [BurgerStatus, setBurgerStatus] = useState(false);
+  const cars = useSelector(selectCars);
   return (
     <Container>
       <a href="#">
         <img src="/images/logo.svg" alt="" />
       </a>
       <Menu>
-        <a href="#">Model S</a>
+        {cars &&
+          cars.map((car, index) => (
+            <a key={index} href="#">
+              {car}
+            </a>
+          ))}
+        {/* <a href="#">Model S</a>
         <a href="#">Model 3</a>
         <a href="#">Model X</a>
-        <a href="#">Model Y</a>
+        <a href="#">Model Y</a> */}
       </Menu>
       <RightMenu>
         <a href="#">Shop</a>
@@ -26,18 +35,14 @@ function Header() {
           <CustomClose onClick={() => setBurgerStatus(false)} />
         </CloseWrapper>
 
-        <li>
-          <a href="Model S">Model S</a>
-        </li>
-        <li>
-          <a href="Model 3">Model 3</a>
-        </li>
-        <li>
-          <a href="Model X">Model X</a>
-        </li>
-        <li>
-          <a href="Model Y">Model Y</a>
-        </li>
+        {cars &&
+          cars.map((car, index) => (
+            <li>
+              <a key={index} href="">
+                {car}
+              </a>
+            </li>
+          ))}
         <li>
           <a href="">Existing Inventory</a>
         </li>
