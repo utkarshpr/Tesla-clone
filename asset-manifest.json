@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tesla-clone/static/css/main.2022b505.css",
+    "main.js": "/Tesla-clone/static/js/main.964be0d5.js",
+    "index.html": "/Tesla-clone/index.html",
+    "main.2022b505.css.map": "/Tesla-clone/static/css/main.2022b505.css.map",
+    "main.964be0d5.js.map": "/Tesla-clone/static/js/main.964be0d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2022b505.css",
+    "static/js/main.964be0d5.js"
+  ]
+}
